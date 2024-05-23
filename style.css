@@ -1,0 +1,757 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+  
+
+
+/* baggrunde */
+.forside {
+    background-image: url(media/Himmel\ bred.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.destilleriside {
+    background-image: url(media/Himmel\ mørk.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* overskrifter */
+h1 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    color: black;
+    text-align: center;
+}
+
+.overskriftstor {
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    display: flex;
+    justify-content: center;
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5vw;
+    text-align: center;
+    color: black;
+}
+
+/* navbar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    height: var(--nav-height);
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+    min-height: 60px    ;
+    transition: 0.6s;
+}
+
+.nav img {
+    max-height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 10px 50px;
+    
+}
+
+.nav-links :hover{
+    color: black;
+}
+
+.nav-links li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px black;
+    font-size: 2vw;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.drpcontent {
+    display: none;
+    position: absolute;
+    background-color: rgba(255,255,255,0.5);
+    min-width: 160px;
+    z-index: 1;
+    top: 100%;
+}
+
+.drpcontent a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.drpcontent a:hover {
+    background-color: white;
+}
+
+.drp:hover .drpcontent {
+    display: block;
+}
+
+
+.menu-icon {
+    display: none;
+    font-size: 8vw;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(255,255,255,0.5);
+
+        
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .nav-active :hover{
+        color: black;
+    }
+
+    .nav-active a {
+        font-size: 6vw;  /* ændring af font når nav er aktiv */
+    }
+
+  
+
+}
+
+/* navbar forsvind */
+.nav--hidden {
+    transform: translateY(calc(-2 * var(--nav-height)));
+    box-shadow: none;
+    transition: 0.6s;
+}
+
+
+
+/*header*/
+
+header {
+    --nav-height: 50px;
+    padding-top: var(--nav-height);
+    padding-bottom: 40px;
+}
+
+
+/*footer*/
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(255,255,255,0.5);
+    color: black;
+    padding-left:  5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.leftfooter {
+    display: flex;
+    flex-direction: column;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    font-size: 3vw;
+    
+}
+
+.leftfooter a {
+    text-decoration: none;
+    color: black;
+    padding: 2%;
+}
+
+.socials img {
+    max-width: 5%;
+}
+
+.footerlogo {
+    max-width: 25%;
+}
+
+.rightfooter {
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+}
+
+.nyhedsbrev {
+    margin-top: 25%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+  
+.indsaetemail {
+    display: flex;
+    flex-direction: row;
+}
+  
+  /* Styling af email input felt samt send knap*/
+  input[type=text], input[type=email] {
+    display: flex;
+    font-size: 1vw;
+    height: 20%;
+    padding: 6px;
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.5);
+  }
+
+  /* styling af checkbox*/
+  input[type="checkbox"] {
+    width: 2vw;
+    height: 1.5vw;
+    accent-color: green;
+    margin-top: 18px;
+  }
+  
+
+  @media only screen and (max-width: 900px) {
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255,255,255,0.5);
+        color: black;
+        padding-left:  5%;
+        padding-right: 5%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    
+    .leftfooter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: black;
+        font-size: 8vw;
+        
+    }
+    
+    .leftfooter a {
+        text-decoration: none;
+        color: black;
+        padding: 2%;
+    }
+
+    .leftfooter img {
+        max-width: 100%;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+    }
+    
+    .socials img {
+        width: 40%;
+    }
+    
+    .footerlogo {
+        max-width: 25%;
+    }
+    
+    .rightfooter {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 5vw;
+    }
+    
+    .nyhedsbrev {
+        margin-top: 25%;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+      
+    .indsaetemail {
+        display: flex;
+        flex-direction: row;
+    }
+
+      
+      /* Styling af email input felt samt send knap*/
+      input[type=text], input[type=email] {
+        display: flex;
+        font-size: 4vw;
+        height: 20%;
+        padding: 6px;
+        box-sizing: border-box;
+        background-color: rgba(255,255,255,0.5);
+      }
+    
+      /* styling af checkbox*/
+      input[type="checkbox"] {
+        height: 50px;
+        width: 50px;
+        accent-color: green;
+        margin-top: 18px;
+      }
+  }
+
+
+/* forside */
+
+
+/* velkomst til forsiden - på en sky */
+
+.velkomst {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    color: black;
+}
+
+.velkomsttekst {
+    display: flex;
+    padding-top: 5%;
+    padding-left: 2%;
+}
+
+.torben {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+    padding-top: 2%;
+    padding-right: 2%;
+
+}
+
+.torben img {
+    max-height: 400px;
+    max-width: 800px;
+}
+
+
+/* whisky karrusel - anmeldelser -https://codepen.io/kristen17/pen/wvPebxy */
+
+.nyheder {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    color: color black;
+    text-align: center;
+}
+
+.box {
+    background-color: rgb(126,149,150, 0.7);
+    border: black;
+    border-width: 2px;
+    border-style: solid;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+  
+    > div {
+      flex: 0 0 200px;
+      border-radius: 0.5rem;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+      box-shadow: 1px 5px 15px #3e3b0ec2;
+      position: relative;
+      overflow: hidden;
+  
+      &:nth-of-type(1) {
+        background: url(media/Yamazaki.png)
+          no-repeat 50% / cover;
+      }
+      &:nth-of-type(2) {
+        background: url(media/Glenfarclas.png)
+          no-repeat 50% / cover;
+      }
+      &:nth-of-type(3) {
+        background: url(media/higlandpark10.png)
+          no-repeat 50% / cover;
+      }
+      &:nth-of-type(4) {
+        background: url(media/singleton12.png)
+          no-repeat 50% / cover;
+      }
+  
+      .content {
+        font-size: 1.5em;
+        color: black;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        background: linear-gradient(
+          0deg,
+          rgba(255, 231, 114, 0.676) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: translatey(100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        visibility: hidden;
+  
+        span {
+          display: block;
+          margin-top: 5px;
+          font-size: 1.2vw;
+        }
+      }
+  
+      &:hover {
+        flex: 0 0 350px;
+        box-shadow: 1px 3px 15px #e2e487cb;
+        transform: translatey(-30px);
+      }
+  
+      &:hover .content {
+        opacity: 1;
+        transform: translatey(0%);
+        visibility: visible;
+      }
+    }
+  }
+
+  /* 404 */
+
+.fejl {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 15px;
+    text-align: center;
+    color: black;
+    font-size: 2vw;
+    max-width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+
+}
+
+.fejl h1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4vw;
+    color: black;
+    margin: 2%;
+}
+
+.fejl p {
+    margin: 2%;
+}
+
+.fejl a{
+    text-decoration: underline;
+    color: black;
+}
+
+/* destillerier */
+
+.destillerier {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.destillerier h1 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3vw;
+    color: black; 
+    text-align: center;
+}
+
+.logobox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    background-color:  rgb(126,149,150, 0.7);
+    border: black solid 2px;
+    min-height: 300px;
+}
+
+.logobox img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.infobox {
+    width: 25%;
+    background-color: rgb(255, 255, 255, 0.7);
+    border: black solid 2px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    padding: 2.5%;
+}
+
+.infobox a {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    color: black; 
+    text-decoration: underline black;
+}
+    
+.trehurtige {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1vw;
+    color: black; 
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+
+.destilleribox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2%;
+
+}
+
+
+/* nybegynderen side */
+
+
+.nybegynderen {
+    padding-top: 2.5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2.5%;
+    height: fit-content;
+    background-color:  rgb(126,149,150, 0.7);
+    border: solid black 2px;
+    width: 80%;
+
+}
+
+.begyndertekst {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+}
+
+.laering {
+    display: flex;
+    flex-direction: row;
+    padding-top: 2.5%;
+
+}
+
+.tips {
+    width: 50%;
+}
+
+.tips img {
+    width: 75%;
+}
+
+.infographic {
+    width: 50%;
+}
+
+.infographic img {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+/* Style for ordered list */
+main ol {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 5%;
+}
+
+main li {
+    margin: 0 0 20px 40px; /*afstand og indrykning mellem afsnittene*/
+    position: relative;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+}
+
+main li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    position: absolute;
+    left: -40px;
+    top: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+}
+
+.tips img {
+    max-width: 500px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.infographic {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.infographic img {
+    max-width: 400px;
+
+
+}
+
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    
+
+    .nybegynderen {
+        height: fit-content;
+        background-color:  rgb(126,149,150, 0.7);
+        border: solid black 2px;
+        width: 80%;
+    
+    }
+        
+    .begyndertekst {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3vw;
+    }
+    
+    .laering {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2.5%;
+    
+    }
+    
+    .tips {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;        
+    }
+
+    .tips li {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3vw;
+    }
+
+    main ol {
+        counter-reset: item;
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 15%;
+    }
+
+    
+    .infographic {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        align-content: center;
+    }
+
+    }
